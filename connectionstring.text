@@ -1,0 +1,4 @@
+mongodb://mongoroot:your_strong_password_here@localhost:27017,localhost:27018,localhost:27019/admin?replicaSet=rs0&authSource=admin
+mongodb://localhost:27017,localhost:27018,localhost:27019/admin?replicaSet=rs0&authSource=admin
+
+mongodb://mongoroot:your_strong_password_here@mongo1:27017,mongo2:27018,mongo3:27019/admin?replicaSet=rs0&authSource=admin
