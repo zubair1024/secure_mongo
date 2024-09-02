@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  mongo3:
+    image: mongo:6.0
+    container_name: mongo3
+    command: mongod --replSet rs0 --bind_ip_all --tlsMode requireTLS --tlsCertificateKeyFile /etc/mongodb/mongodb.pem --tlsCAFile /etc/mongodb/ca.pem --keyFile /etc/mongodb/mongo-keyfile
+    # command: mongod --replSet rs0 --bind_ip_all --tlsMode requireTLS --tlsCertificateKeyFile /etc/mongodb/mongodb.pem --tlsCAFile /etc/mongodb/ca.pem --auth --keyFile /etc/mongodb/mongo-keyfile
+    volumes:
+      - ./data/mongo3:/data/db
+      - ./certs:/etc/mongodb
+    ports:
+      - "27017:27017"
+    networks:
+      - mongo-network
+
+networks:
+  mongo-network:
+    driver: bridge

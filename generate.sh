@@ -22,9 +22,9 @@ subjectAltName = @alt_names
 
 [alt_names]
 DNS.1 = localhost
-DNS.2 = mongo1
-DNS.3 = mongo2
-DNS.4 = mongo3
+DNS.2 = node1.razrlab.com
+DNS.3 = node2.razrlab.com
+DNS.4 = node3.razrlab.com
 IP.1 = 127.0.0.1
 EOF
 
